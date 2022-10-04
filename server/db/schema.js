@@ -14,9 +14,10 @@ let userSchema = mongoose.Schema({
   lat: { type: String },
   long: { type: String },
   books: [{ type: String }],
+  saved: [{ type: String }],
   ratingTotal: { type: Number },
   ratingsCount: { type: Number },
-  sub: { type: String },
+  uid: { type: String },
   trades: [
     {
       transactionID: mongoose.ObjectId,
@@ -49,6 +50,8 @@ let getData = () => {
   return User.find({}).limit(10);
 };
 
-module.exports = {
-  getData,
+let getISBNs = () => {
+  return User.find();
 };
+
+module.exports = User;
