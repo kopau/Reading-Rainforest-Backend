@@ -25,10 +25,7 @@
     "mongodb": "^4.10.0",
     "mongoose": "^6.6.3",
     "morgan": "^1.10.0",
-<<<<<<< HEAD
-    "nodemon": "^2.0.20"
-=======
+    "nodemon": "^2.0.20",
     "uuid": "^9.0.0"
->>>>>>> d5bc627e11897b3deac27bdcbae15f04dd7262a3
   }
 }
