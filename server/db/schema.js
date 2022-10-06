@@ -13,18 +13,25 @@ let userSchema = mongoose.Schema({
   phoneNumber: { type: String },
   lat: { type: String },
   long: { type: String },
-  books: [{ type: String }],
+  books: [
+    {
+      bookName: { type: String },
+      isbn: { type: String },
+    },
+  ],
   saved: [{ type: String }],
   ratingTotal: { type: Number },
   ratingsCount: { type: Number },
+  averageRating: { type: Number }, // random number from 0 to 5
   uid: { type: String },
   trades: [
     {
       transactionID: mongoose.ObjectId,
       ratingNumber: { type: String },
-      tradedToUser: { type: Number },
+      tradedToUser: { type: String },
       status: { type: String },
-      isbn: { type: String },
+      isbnUser: { type: String },
+      isbnTrader: { type: String },
       dateTime: { type: Date },
     },
   ],
